@@ -12,5 +12,20 @@
     ></script>
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <div id="app"></div>
+    <script>
+      class App extends React.Compoent {
+        render() {
+          return (
+            <div className="app-content">
+              <h1>Hai Vino</h1>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById("app"));
+    </script>
+  </body>
 </html>
