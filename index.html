@@ -36,6 +36,11 @@
         handleCopy = (e) => {
           console.log("Try being original once!");
         };
+        handleChange = (e) => {
+          this.setState({
+            name: e.target.value,
+          });
+        };
         render() {
           return (
             <div className="app-content">
@@ -46,6 +51,10 @@
               <button onClick={this.handleClick}>Click Me</button>
               <button onMouseOver={this.handleMouseOver}>Hover Me</button>
               <p onCopy={this.handleCopy}>What we think, we become</p>
+              <form>
+                <input type="text" onChange={this.handleChange} />
+                <button>Submit</button>
+              </form>
             </div>
           );
         }
