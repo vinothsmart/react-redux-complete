@@ -41,6 +41,9 @@
             name: e.target.value,
           });
         };
+        handleSumbit = (e) => {
+          e.preventDefault();
+        };
         render() {
           return (
             <div className="app-content">
@@ -51,7 +54,7 @@
               <button onClick={this.handleClick}>Click Me</button>
               <button onMouseOver={this.handleMouseOver}>Hover Me</button>
               <p onCopy={this.handleCopy}>What we think, we become</p>
-              <form>
+              <form onSubmit={this.handleSumbit}>
                 <input type="text" onChange={this.handleChange} />
                 <button>Submit</button>
               </form>
