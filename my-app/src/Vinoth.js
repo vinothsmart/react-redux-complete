@@ -1,11 +1,12 @@
 import React from "react";
 
 function Vinoth(props) {
+  const { name, age, from } = props;
   return (
     <div className="vinoth">
-      <div>Name : {props.name}</div>
-      <div>Age : {props.age} </div>
-      <div>From : {props.from}</div>
+      <div>Name : {name}</div>
+      <div>Age : {age} </div>
+      <div>From : {from}</div>
     </div>
   );
 }
