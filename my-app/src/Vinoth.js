@@ -5,7 +5,7 @@ function Vinoth(props) {
   const { namelists } = props;
   const nameList = namelists.namelists.map((namelist) => {
     return (
-      <div className="vinoth">
+      <div className="vinoth" key={namelist.id}>
         <div>Name : {namelist.name}</div>
         <div>Age : {namelist.age} </div>
         <div>From : {namelist.from}</div>
