@@ -16,16 +16,19 @@ function Vinoth(props) {
   //       return null;
   //     }
   //   });
-  const nameList = namelists.map((namelist) => {
-    return namelist.age > 20 ? (
-      <div className="vinoth" key={namelist.id}>
-        <div>Name : {namelist.name}</div>
-        <div>Age : {namelist.age} </div>
-        <div>From : {namelist.from}</div>
-      </div>
-    ) : null;
-  });
-  return <div className="vinothList">{nameList}</div>;
+  return (
+    <div className="vinothList">
+      {namelists.map((namelist) => {
+        return namelist.age > 20 ? (
+          <div className="vinoth" key={namelist.id}>
+            <div>Name : {namelist.name}</div>
+            <div>Age : {namelist.age} </div>
+            <div>From : {namelist.from}</div>
+          </div>
+        ) : null;
+      })}
+    </div>
+  );
 }
 
 export default Vinoth;
