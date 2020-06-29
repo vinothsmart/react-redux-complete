@@ -5,8 +5,8 @@ function App() {
   const [names, setNames] = useState({
     namelists: [
       { name: "Vinoth", age: 30, from: "Kumbakonam", id: 1 },
-      { name: "Anand", age: 30, from: "Kumbakonam", id: 2 },
-      { name: "Kanna", age: 30, from: "Kumbakonam", id: 3 },
+      { name: "Anand", age: 20, from: "Kumbakonam", id: 2 },
+      { name: "Kanna", age: 25, from: "Kumbakonam", id: 3 },
     ],
   });
   return (
