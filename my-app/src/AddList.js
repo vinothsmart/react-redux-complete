@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddList() {
+function AddList(props) {
   let initialState = { name: null, age: null, form: null };
   const [state, setState] = useState(initialState);
   const handleChange = (e) => {
@@ -8,7 +8,8 @@ function AddList() {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(state);
+    // console.log(state);
+    props.addList(state);
   };
   return (
     <div>
