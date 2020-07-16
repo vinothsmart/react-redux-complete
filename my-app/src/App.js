@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Vinoth from "./Vinoth";
+import AddList from "./AddList";
 
 function App() {
   const [names, setNames] = useState({
@@ -16,6 +17,7 @@ function App() {
       {/* <Vinoth name="TempleCityVino" age="30" from="Kumbakonam" />
       <Vinoth name="Kanna" age="30" from="Kumbakonam" /> */}
       <Vinoth namelists={names} />
+      <AddList />
     </div>
   );
 }
