@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 
 function AddList(props) {
-  let initialState = { name: null, age: null, form: null };
+  let initialState = {
+    name: null,
+    age: null,
+    form: null,
+  };
   const [state, setState] = useState(initialState);
   const handleChange = (e) => {
-    setState({ [e.target.id]: e.target.value });
+    setState({
+      [e.target.id]: e.target.value,
+    });
   };
   const handleSubmit = (e) => {
     e.preventDefault();

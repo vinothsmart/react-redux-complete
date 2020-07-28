@@ -17,15 +17,18 @@ function App() {
     setNames({
       namelists: namelists,
     });
-    console.log(namelists);
+    console.log(names);
   };
+
+  const deleteList = (id) => {};
+
   return (
     <div className="App">
       <h1>My React App!!</h1>
       <p>Welcome : )</p>
       {/* <Vinoth name="TempleCityVino" age="30" from="Kumbakonam" />
       <Vinoth name="Kanna" age="30" from="Kumbakonam" /> */}
-      <Vinoth namelists={names} />
+      <Vinoth deleteList={deleteList} namelists={names} />
       <AddList addList={addList} />
     </div>
   );

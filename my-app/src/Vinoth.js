@@ -24,6 +24,9 @@ function Vinoth(props) {
             <div>Name : {namelist.name}</div>
             <div>Age : {namelist.age} </div>
             <div>From : {namelist.from}</div>
+            <button onClick={() => props.deleteList(namelist.id)}>
+              Delete
+            </button>
           </div>
         ) : null;
       })}
