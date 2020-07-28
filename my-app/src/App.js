@@ -31,7 +31,9 @@ function App() {
       <Vinoth name="Kanna" age="30" from="Kumbakonam" /> */}
       {/* <Vinoth deleteList={deleteList} namelists={names} />
       <AddList addList={addList} /> */}
-      <List />
+      <List name="Vinoth" age="30" from="Kumbakonam" />
+      <List name="Ajitha" age="29" from="Palakkad" />
+      <List name="Vigensh" age="28" from="Kumbakonam" />
     </div>
   );
 }

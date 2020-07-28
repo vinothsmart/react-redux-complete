@@ -36,12 +36,13 @@ import React from "react";
 
 // export default Vinoth;
 
-export default function List() {
+export default function List(props) {
+  console.log(props);
   return (
     <div className="list">
-      <div>Name: Vinoth</div>
-      <div>Age: 30</div>
-      <div>From: Kumbakonam</div>
+      <div>Name: {props.name}</div>
+      <div>Age: {props.age}</div>
+      <div>From: {props.from}</div>
     </div>
   );
 }
