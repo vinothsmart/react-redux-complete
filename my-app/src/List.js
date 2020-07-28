@@ -37,12 +37,12 @@ import React from "react";
 // export default Vinoth;
 
 export default function List(props) {
-  console.log(props);
+  const { name, age, from } = props;
   return (
     <div className="list">
-      <div>Name: {props.name}</div>
-      <div>Age: {props.age}</div>
-      <div>From: {props.from}</div>
+      <div>Name: {name}</div>
+      <div>Age: {age}</div>
+      <div>From: {from}</div>
     </div>
   );
 }
