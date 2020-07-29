@@ -53,15 +53,27 @@ export default function List(props) {
   //   }
   // });
 
-  const nameList = lists.map((list) => {
-    return list.age > 20 ? (
-      <div className="list" key={list.id}>
-        <div>Name: {list.name}</div>
-        <div>Age: {list.age}</div>
-        <div>From: {list.from}</div>
-      </div>
-    ) : null;
-  });
+  // const nameList = lists.map((list) => {
+  //   return list.age > 20 ? (
+  //     <div className="list" key={list.id}>
+  //       <div>Name: {list.name}</div>
+  //       <div>Age: {list.age}</div>
+  //       <div>From: {list.from}</div>
+  //     </div>
+  //   ) : null;
+  // });
 
-  return <div className="name-list">{nameList}</div>;
+  return (
+    <div className="name-list">
+      {lists.map((list) => {
+        return list.age > 20 ? (
+          <div className="list" key={list.id}>
+            <div>Name: {list.name}</div>
+            <div>Age: {list.age}</div>
+            <div>From: {list.from}</div>
+          </div>
+        ) : null;
+      })}
+    </div>
+  );
 }
