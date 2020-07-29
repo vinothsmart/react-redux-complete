@@ -39,13 +39,17 @@ import React from "react";
 export default function List(props) {
   const { lists } = props;
   const nameList = lists.map((list) => {
-    return (
-      <div className="list" key={list.id}>
-        <div>Name: {list.name}</div>
-        <div>Age: {list.age}</div>
-        <div>From: {list.from}</div>
-      </div>
-    );
+    if (list.age > 20) {
+      return (
+        <div className="list" key={list.id}>
+          <div>Name: {list.name}</div>
+          <div>Age: {list.age}</div>
+          <div>From: {list.from}</div>
+        </div>
+      );
+    } else {
+      return null;
+    }
   });
   return <div className="name-list">{nameList}</div>;
 }
