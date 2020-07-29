@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 
 function AddList(props) {
-  let initialState = {
+  const [state, setState] = useState({
     name: null,
     age: null,
     form: null,
-  };
-  const [state, setState] = useState(initialState);
+  });
+
   const handleChange = (e) => {
     setState({
       [e.target.id]: e.target.value,
     });
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(state);
-    props.addList(state);
+    console.log(state);
+    // props.addList(state);
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
