@@ -11,6 +11,14 @@ function App() {
     ],
   });
 
+  const addList = (namelist) => {
+    namelist.id = Math.random();
+    let lists = [...names.namelists, namelist];
+    setNames({
+      namelists: lists,
+    });
+  };
+
   return (
     <div className="App">
       <h1>My React App!!</h1>
@@ -19,7 +27,7 @@ function App() {
       <List name="Ajitha" age="29" from="Palakkad" />
       <List name="Vigensh" age="28" from="Kumbakonam" /> */}
       <List lists={names.namelists} />
-      <AddList />
+      <AddList addList={addList} />
     </div>
   );
 }
