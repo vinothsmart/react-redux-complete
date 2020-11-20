@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import TodoComponent from "./Component/TodoComponent";
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
     //     </a>
     //   </header>
     // </div>
+
     <div>
-      <h1>Vinoth</h1>
-      <p>Hello</p>
+      <TodoComponent message="I Like Briyani" />
     </div>
   );
 }
