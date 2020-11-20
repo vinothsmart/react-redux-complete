@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import TodoComponent from "./Component/TodoComponent";
@@ -8,6 +9,10 @@ function App() {
     variety: "Chicken 65 Briyani",
     price: "250",
   };
+
+  const [intialState] = useState({
+    todos: ["wash up", "eat some Briyani", "take a nap"],
+  });
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -28,6 +33,14 @@ function App() {
 
     <div>
       <TodoComponent message="I Like Briyani" briyani={myBriyani} />
+      <div>
+        <p>The business people have the most leisure...</p>
+        <ul>
+          <li>{intialState.todos[0]}</li>
+          <li>{intialState.todos[1]}</li>
+          <li>{intialState.todos[2]}</li>
+        </ul>
+      </div>
     </div>
   );
 }
