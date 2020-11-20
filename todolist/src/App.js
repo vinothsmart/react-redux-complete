@@ -10,9 +10,18 @@ function App() {
     price: "250",
   };
 
-  const [intialState] = useState({
+  const [intialState, setIntialState] = useState({
     todos: ["wash up", "eat some Briyani", "take a nap"],
+    age: 30,
   });
+
+  setTimeout(() => {
+    setIntialState({
+      todos: ["wash up", "eat some Briyani", "take a nap"],
+      age: 35,
+    });
+  }, 5000);
+
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -35,6 +44,7 @@ function App() {
       <TodoComponent message="I Like Briyani" briyani={myBriyani} />
       <div>
         <p>The business people have the most leisure...</p>
+        <p>{intialState.age}</p>
         <ul>
           <li>{intialState.todos[0]}</li>
           <li>{intialState.todos[1]}</li>
