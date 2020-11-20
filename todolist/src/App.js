@@ -3,6 +3,11 @@ import "./App.css";
 import TodoComponent from "./Component/TodoComponent";
 
 function App() {
+  let myBriyani = {
+    name: "Briyani",
+    variety: "Chicken 65 Briyani",
+    price: "250",
+  };
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -22,7 +27,7 @@ function App() {
     // </div>
 
     <div>
-      <TodoComponent message="I Like Briyani" />
+      <TodoComponent message="I Like Briyani" briyani={myBriyani} />
     </div>
   );
 }
