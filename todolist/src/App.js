@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import TodoComponent from "./Component/TodoComponent";
+import TodoItem from "./Component/TodoItem";
 
 function App() {
   let myBriyani = {
@@ -29,7 +30,7 @@ function App() {
 
   let todos = intialState.todos;
   todos = todos.map((item, index) => {
-    return <li>{item}</li>;
+    return <TodoItem item={item} key={index} />;
   });
 
   return (
