@@ -28,15 +28,25 @@ function App() {
   //   });
   // }, 5000);
 
-  let todos = intialState.todos;
-  todos = todos.map((item, index) => {
-    return <TodoItem item={item} key={index} />;
-  });
-
   // custom function
   const handleClick = () => {
     console.log("You Clicked Me");
   };
+
+  const onDelete = (item) => {
+    let updateTodos = intialState.todos.filter((val, index) => {
+      return item !== val;
+    });
+
+    setIntialState({
+      todos: updateTodos,
+    });
+  };
+
+  let todos = intialState.todos;
+  todos = todos.map((item, index) => {
+    return <TodoItem item={item} key={index} onDelete={onDelete} />;
+  });
 
   return (
     // <div className="App">
