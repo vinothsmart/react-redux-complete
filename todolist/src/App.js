@@ -33,6 +33,11 @@ function App() {
     return <TodoItem item={item} key={index} />;
   });
 
+  // custom function
+  const handleClick = () => {
+    console.log("You Clicked Me");
+  };
+
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -54,7 +59,9 @@ function App() {
     <div>
       <TodoComponent message="I Like Briyani" briyani={myBriyani} />
       <div>
-        <p>The business people have the most leisure...</p>
+        <p onClick={handleClick}>
+          The business people have the most leisure...
+        </p>
         <p>{intialState.age}</p>
         <ul>
           {/* <li>{intialState.todos[0]}</li>
