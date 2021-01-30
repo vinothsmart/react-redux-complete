@@ -1,3 +1,5 @@
+import "../css/todoitem.css";
+
 function TodoIteam(props) {
   // custom functions
   const handleDelete = () => {
@@ -5,14 +7,18 @@ function TodoIteam(props) {
   };
 
   return (
-    <li>
-      <div className="todo-item">
-        <span className="item-name">{props.item} </span>
-        <span className="item-delete" onClick={handleDelete}>
-          x
-        </span>
-      </div>
-    </li>
+    <div id="todo-list">
+      <ul>
+        <li>
+          <div className="todo-item">
+            <span className="item-name">{props.item} </span>
+            <span className="item-delete" onClick={handleDelete}>
+              x
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
   );
 }
 
