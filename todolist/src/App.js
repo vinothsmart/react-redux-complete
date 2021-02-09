@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import TodoComponent from "./Component/TodoComponent";
 import TodoItem from "./Component/TodoItem";
+import AddItem from "./Component/AddItem";
 
 function App() {
   let myBriyani = {
@@ -79,6 +80,7 @@ function App() {
           <li>{intialState.todos[2]}</li> */}
           {todos}
         </ul>
+        <AddItem />
       </div>
     </div>
   );
