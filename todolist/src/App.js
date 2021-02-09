@@ -44,6 +44,15 @@ function App() {
     });
   };
 
+  const onAdd = (item) => {
+    let updateTodos = intialState.todos;
+    updateTodos.push(item);
+
+    setIntialState({
+      todos: updateTodos,
+    });
+  };
+
   let todos = intialState.todos;
   todos = todos.map((item, index) => {
     return <TodoItem item={item} key={index} onDelete={onDelete} />;
@@ -80,7 +89,7 @@ function App() {
           <li>{intialState.todos[2]}</li> */}
           {todos}
         </ul>
-        <AddItem />
+        <AddItem onAdd={onAdd} />
       </div>
     </div>
   );

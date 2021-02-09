@@ -1,14 +1,15 @@
 import React, { useRef } from "react";
+import "../css/addItem.css";
 
-function AddItem() {
+function AddItem(props) {
   const inputNewItem = useRef(null);
   const handleSumbit = (e) => {
     e.preventDefault();
-    console.log(inputNewItem.current.value);
+    props.onAdd(inputNewItem.current.value);
   };
 
   return (
-    <form id="add-toto" onSubmit={handleSumbit}>
+    <form id="add-todo" onSubmit={handleSumbit}>
       <input type="text" required ref={inputNewItem} />
       <input type="submit" value="Hit me" />
     </form>
