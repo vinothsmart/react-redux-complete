@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 import TodoComponent from "./Component/TodoComponent";
@@ -52,6 +52,10 @@ function App() {
       todos: updateTodos,
     });
   };
+  // lifecycle functions
+  useEffect(() => {
+    console.log("componentWillMount");
+  });
 
   let todos = intialState.todos;
   todos = todos.map((item, index) => {
