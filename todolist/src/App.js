@@ -82,7 +82,7 @@ function App() {
     // </div>
     <>
       <Router>
-        <Route path={"/"} component={TodoComponent}></Route>
+        {/* <Route path={"/"} component={TodoComponent}></Route> */}
       </Router>
       <div id="todo-wrapper">
         <TodoComponent message="I Like Briyani" briyani={myBriyani} />
