@@ -4,6 +4,7 @@ import "./App.css";
 import TodoComponent from "./Component/TodoComponent";
 import TodoItem from "./Component/TodoItem";
 import AddItem from "./Component/AddItem";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   let myBriyani = {
@@ -79,23 +80,27 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-
-    <div id="todo-wrapper">
-      <TodoComponent message="I Like Briyani" briyani={myBriyani} />
-      <div>
-        <p onClick={handleClick}>
-          The business people have the most leisure...
-        </p>
-        <p>{intialState.age}</p>
-        <ul>
-          {/* <li>{intialState.todos[0]}</li>
+    <>
+      <Router>
+        <Route path={"/"} component={TodoComponent}></Route>
+      </Router>
+      <div id="todo-wrapper">
+        <TodoComponent message="I Like Briyani" briyani={myBriyani} />
+        <div>
+          <p onClick={handleClick}>
+            The business people have the most leisure...
+          </p>
+          <p>{intialState.age}</p>
+          <ul>
+            {/* <li>{intialState.todos[0]}</li>
           <li>{intialState.todos[1]}</li>
           <li>{intialState.todos[2]}</li> */}
-          {todos}
-        </ul>
-        <AddItem onAdd={onAdd} />
+            {todos}
+          </ul>
+          <AddItem onAdd={onAdd} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
