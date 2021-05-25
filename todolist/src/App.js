@@ -5,6 +5,7 @@ import TodoComponent from "./Component/TodoComponent";
 import TodoItem from "./Component/TodoItem";
 import AddItem from "./Component/AddItem";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import AboutUs from "./Component/AboutUs";
 
 function App() {
   let myBriyani = {
@@ -83,6 +84,7 @@ function App() {
     <>
       <Router>
         {/* <Route path={"/"} component={TodoComponent}></Route> */}
+        <Route path={"/about"} component={AboutUs}></Route>
       </Router>
       <div id="todo-wrapper">
         <TodoComponent message="I Like Briyani" briyani={myBriyani} />
