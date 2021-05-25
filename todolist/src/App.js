@@ -89,6 +89,7 @@ function App() {
       <div id="todo-wrapper">
         <TodoComponent message="I Like Briyani" briyani={myBriyani} />
         <div>
+          <p>About</p>
           <p onClick={handleClick}>
             The business people have the most leisure...
           </p>
