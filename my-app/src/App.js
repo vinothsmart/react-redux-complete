@@ -23,9 +23,6 @@ function App() {
     <div className="App">
       <h1>My React App!!</h1>
       <p>Welcome : )</p>
-      {/* <List name="Vinoth" age="30" from="Kumbakonam" />
-      <List name="Ajitha" age="29" from="Palakkad" />
-      <List name="Vigensh" age="28" from="Kumbakonam" /> */}
       <Lists lists={names.namelists} />
       <AddList addList={addList} />
     </div>

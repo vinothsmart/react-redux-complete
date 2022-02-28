@@ -1,23 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
-function AddList(props) {
+const AddList = ({ addList }) => {
   const [state, setState] = useState({
     name: null,
     age: null,
-    form: null,
+    from: null,
   });
 
-  const handleChange = (e) => {
-    setState({
-      [e.target.id]: e.target.value,
-    });
-  };
+  const handleChange = useCallback(
+    (e) => {
+      setState({
+        ...state,
+        [e.target.id]: e.target.value,
+      });
+    },
+    [state]
+  );
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // console.log(state);
-    props.addList(state);
-  };
+  const handleSubmit = useCallback(
+    (e) => {
+      e.preventDefault();
+      addList(state);
+    },
+    [state, addList]
+  );
 
   return (
     <div>
@@ -26,12 +32,12 @@ function AddList(props) {
         <input type="text" id="name" onChange={handleChange} />
         <label htmlFor="age">Age:</label>
         <input type="text" id="age" onChange={handleChange} />
-        <label htmlFor="form">Form:</label>
-        <input type="text" id="form" onChange={handleChange} />
+        <label htmlFor="form">From:</label>
+        <input type="text" id="from" onChange={handleChange} />
         <button>Submit</button>
       </form>
     </div>
   );
-}
+};
 
 export default AddList;
