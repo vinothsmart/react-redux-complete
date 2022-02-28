@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import List from "./List";
+import Lists from "./Lists";
 import AddList from "./AddList";
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
       {/* <List name="Vinoth" age="30" from="Kumbakonam" />
       <List name="Ajitha" age="29" from="Palakkad" />
       <List name="Vigensh" age="28" from="Kumbakonam" /> */}
-      <List lists={names.namelists} />
+      <Lists lists={names.namelists} />
       <AddList addList={addList} />
     </div>
   );

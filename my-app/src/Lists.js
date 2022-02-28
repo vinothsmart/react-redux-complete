@@ -1,8 +1,6 @@
 import React from "react";
 
-export default function List(props) {
-  const { lists } = props;
-
+export default function Lists({ lists }) {
   return (
     <div className="name-list">
       {lists.map((list) => {
