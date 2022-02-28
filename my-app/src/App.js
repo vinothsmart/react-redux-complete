@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Lists from "./Lists";
 import AddList from "./AddList";
 
@@ -11,19 +11,30 @@ function App() {
     ],
   });
 
-  const addList = (namelist) => {
-    namelist.id = Math.random();
-    let lists = [...names.namelists, namelist];
-    setNames({
-      namelists: lists,
-    });
-  };
+  const addList = useCallback(
+    (namelist) => {
+      namelist.id = Math.random();
+      setNames({
+        namelists: [...names.namelists, namelist],
+      });
+    },
+    [names]
+  );
+
+  const deletelist = useCallback(
+    (id) => {
+      setNames({
+        namelists: names.namelists.filter((list) => list.id !== id),
+      });
+    },
+    [names]
+  );
 
   return (
     <div className="App">
       <h1>My React App!!</h1>
       <p>Welcome : )</p>
-      <Lists lists={names.namelists} />
+      <Lists lists={names.namelists} deletelist={deletelist} />
       <AddList addList={addList} />
     </div>
   );
