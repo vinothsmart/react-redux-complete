@@ -1,11 +1,15 @@
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
   const navigate = useNavigate();
-  setTimeout(() => {
-    navigate('/about');
-  }, 2000);
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate('/about');
+    }, 2000);
+  }, [navigate]);
+
   return (
     <div className='container'>
       <h4 className='center'>Contact</h4>
