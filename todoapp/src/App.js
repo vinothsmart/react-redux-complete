@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Todos from './Todos';
 
 function App() {
   const [todos, setTodos] = useState([
@@ -11,7 +12,11 @@ function App() {
       content: 'Play mario kart',
     },
   ]);
-  return <></>;
+  return (
+    <>
+      <Todos todos={todos} />
+    </>
+  );
 }
 
 export default App;
