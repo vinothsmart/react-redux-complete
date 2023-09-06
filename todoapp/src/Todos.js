@@ -1,12 +1,12 @@
 import { memo } from 'react';
 
-const Todos = ({ todos }) => {
+const Todos = ({ todos, deleteTodo }) => {
   return (
     <div className='todos collection'>
       {todos.length ? (
         todos.map(todo => {
           return (
-            <div className='collection-item' key={todo.id}>
+            <div className='collection-item' key={todo.id} onClick={deleteTodo(todo.id)}>
               <span>{todo.content}</span>
             </div>
           );
