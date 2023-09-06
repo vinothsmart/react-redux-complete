@@ -1,7 +1,12 @@
+import { Suspense, lazy } from 'react';
+const Navbar = lazy(() => import('./components/Navbar'));
+
 function App() {
   return (
     <div className='todo-app container'>
-      <h1>React Router</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Navbar />
+      </Suspense>
     </div>
   );
 }
