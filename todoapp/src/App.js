@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import Todos from './Todos';
+import { lazy, Suspense, useState } from 'react';
+const Todos = lazy(() => import('./Todos'));
 
 function App() {
   const [todos, setTodos] = useState([
@@ -13,9 +13,12 @@ function App() {
     },
   ]);
   return (
-    <>
-      <Todos todos={todos} />
-    </>
+    <div className='App'>
+      <h1 className='center blue-text'>Todo's</h1>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Todos todos={todos} />
+      </Suspense>
+    </div>
   );
 }
 
